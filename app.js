@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
 
     Object.getOwnPropertyNames(process.env).forEach(
         function(val, idx, array){
-            message+=val + process.env[val] + "<br>"
+            message+=val + " = " + process.env[val] + "<br>"
             
         }
     )
