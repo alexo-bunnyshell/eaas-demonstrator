@@ -1,0 +1,18 @@
+version: '3'
+services:
+    node:
+        build: .
+        ports:
+          - '3000:3000'
+        # We can override any env values here.
+        # By default the .env in the project root will be loaded as the environment for all containers
+        environment:
+            APP_DEBUG: "true"
+            APP_SECRET: "my name is NEO"
+        # Mount the codebase, so any code changes we make will be propagated to the running application
+        # volumes:
+            # Here we mount in our codebase so any changes are immediately reflected into the container
+            # - '.:/opt/apps/laravel-in-kubernetes'
+        # networks:
+            # - laravel-in-kubernetes
+        # user: "1000:1000"
