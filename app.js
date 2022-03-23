@@ -4,7 +4,7 @@ const app = express()
 const pug = require('pug');
 
 // Compile the source code
-const compiledFunction = pug.compileFile('templates/start.pug');
+const compiledFunction = pug.compileFile('start.pug');
 
 app.get('/', function (req, res) {
     // console.log("req");

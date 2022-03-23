@@ -1,6 +1,6 @@
 FROM node:16
 WORKDIR /usr/src/app
-COPY package*.json app.js ./
+COPY package*.json app.js start.pug ./
 RUN npm install
 EXPOSE 3000
 CMD ["node", "app.js"]
