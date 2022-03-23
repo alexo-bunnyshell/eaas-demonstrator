@@ -8,7 +8,7 @@ const compiledFunction = pug.compileFile('start.pug');
 
 app.get('/', function (req, res) {
     // console.log("req");
-    var message = "Grig ROCKS!<br>";
+    var message = "You ROCK!<br>";
     message += (process.env.APP_SECRET ? "I have a secret: "+process.env.APP_SECRET : "I don't have any secrets") + "<br>"
 
     Object.getOwnPropertyNames(process.env).forEach(
