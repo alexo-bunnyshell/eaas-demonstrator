@@ -1,6 +1,11 @@
 const express = require('express')
 const app = express()
 
+const pug = require('pug');
+
+// Compile the source code
+const compiledFunction = pug.compileFile('templates/start.pug');
+
 app.get('/', function (req, res) {
     // console.log("req");
     var message = "Grig ROCKS!<br>";
@@ -14,7 +19,7 @@ app.get('/', function (req, res) {
     )
 
 
-    res.send(message)
+    res.send(compiledFunction({message:message}))
 })
 
 Object.getOwnPropertyNames(process.env).forEach(
