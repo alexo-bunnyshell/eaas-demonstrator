@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
     )
 
     let options={}
-    ejs.renderFile('start.html', {variables:variables}, options, function(err, str){
+    ejs.renderFile('templates/start.html', {variables:variables}, options, function(err, str){
         // str => Rendered HTML string
         console.log("compiled response ", err)
         res.send(str)
